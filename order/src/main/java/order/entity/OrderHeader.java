@@ -9,6 +9,7 @@ import java.util.Date;
 @Entity
 @Data
 @Table(name = "order_header")
+
 public class OrderHeader implements Serializable {
     @Id
     @Column(name = "order_id", length = 20, nullable = false)
@@ -47,6 +48,93 @@ public class OrderHeader implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date completedDate;
 
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getOrderName() {
+        return orderName;
+    }
+
+    public void setOrderName(String orderName) {
+        this.orderName = orderName;
+    }
+
+    public Date getPlacedDate() {
+        return placedDate;
+    }
+
+    public void setPlacedDate(Date placedDate) {
+        this.placedDate = placedDate;
+    }
+
+    public Date getApprovedDate() {
+        return approvedDate;
+    }
+
+    public void setApprovedDate(Date approvedDate) {
+        this.approvedDate = approvedDate;
+    }
+
+    public String getStatusId() {
+        return statusId;
+    }
+
+    public void setStatusId(String statusId) {
+        this.statusId = statusId;
+    }
+
+    public String getPartyId() {
+        return partyId;
+    }
+
+    public void setPartyId(String partyId) {
+        this.partyId = partyId;
+    }
+
+    public String getCurrencyUomId() {
+        return currencyUomId;
+    }
+
+    public void setCurrencyUomId(String currencyUomId) {
+        this.currencyUomId = currencyUomId;
+    }
+
+    public String getProductStoreId() {
+        return productStoreId;
+    }
+
+    public void setProductStoreId(String productStoreId) {
+        this.productStoreId = productStoreId;
+    }
+
+    public String getSalesChannelEnumId() {
+        return salesChannelEnumId;
+    }
+
+    public void setSalesChannelEnumId(String salesChannelEnumId) {
+        this.salesChannelEnumId = salesChannelEnumId;
+    }
+
+    public Double getGrandTotal() {
+        return grandTotal;
+    }
+
+    public void setGrandTotal(Double grandTotal) {
+        this.grandTotal = grandTotal;
+    }
+
+    public Date getCompletedDate() {
+        return completedDate;
+    }
+
+    public void setCompletedDate(Date completedDate) {
+        this.completedDate = completedDate;
+    }
 }
 
 

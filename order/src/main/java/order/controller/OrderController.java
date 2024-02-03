@@ -51,7 +51,7 @@ public class OrderController {
     @PatchMapping("/{orderId}")
     public ResponseEntity<OrderItemRequestResponse> updateOrderName(
             @RequestBody UpdateOrderRequest updateOrderRequest) {
-        OrderItemRequestResponse orderResponse = orderService.updateOrderName(updateOrderRequest.getOrderId(), updateOrderRequest.getOrderName());
+        OrderItemRequestResponse orderResponse = orderService.updateOrderName(updateOrderRequest.getOrder_id(), updateOrderRequest.getOrder_name());
         return new ResponseEntity<>(orderResponse, HttpStatus.OK);
     }
 }
